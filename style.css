@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css?family=Hind|Squada+One&display=swap');
+
+/*========================================
+Colors
+==========================================*/
+
+html {
+	--color-black: #000000;
+	--color-light-black: #666666;
+	--color-super-light-black: #CCCCCC;
+
+	--color-blue: #8BA8B7;
+	--color-light-blue: #BEDBEA;
+	--color-super-light-blue: #D8F5FF;
+
+	--color-yellow: #FFFF0D;
+	--color-light-yellow: #FFFF40;
+	--color-super-light-yellow: #FFFF73;
+
+	--size-ratio: 1.2;
+	--size-six-up: calc( var(--size-five-up) * var(--size-ratio) );
+	--size-five-up: calc( var(--size-four-up) * var(--size-ratio) );
+	--size-four-up: calc( var(--size-three-up) * var(--size-ratio) );
+	--size-three-up: calc( var(--size-two-up) * var(--size-ratio) );
+	--size-two-up: calc( var(--size-one-up) * var(--size-ratio) );
+	--size-one-up: calc( 1rem * var(--size-ratio) );
+	--size-one-half-down: calc( 0.75rem * var(--size-ratio) );
+	--size-one-down: calc( 0.5rem * var(--size-ratio) );
+
+	font-family: var(--font-body);
+}
+
+main {
+	max-width: 40rem;
+	margin: auto;
+}
+
+/*========================================
+Typography
+==========================================*/
+
+a {
+	text-decoration: none;
+}
+
+a:active {
+	color: var(--color-light-blue);
+	background: var(--color-super-light-blue);
+	text-decoration: underline;
+}
+
+a:focus {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: var(--color-blue);
+}
+
+html {
+	--font-body: 'Hind', sans-serif;
+    --font-head: 'Squada One', cursive;
+}
+
+
+/*========================================
+Header Component
+==========================================*/
+
+.page-nav a {
+	text-decoration: none;
+}
+
+.page-nav a:active {
+	color: var(--color-light-blue);
+	background: var(--color-super-light-blue);
+	text-decoration: underline;
+}
+
+.page-nav a:focus {
+	text-decoration: underline;
+}
+
+.page-nav a:visited {
+	color: purple;
+}
+
+.page-nav li {
+	border-bottom: 1px solid rgba(0,0,0,.3);
+	display: block;
+	font-family: var(--font-head);
+	font-size: 1.25rem;
+	margin: .5rem 1rem 1rem 0;
+	list-style: none;
+	text-decoration: none;
+	text-transform: uppercase; 
+}
+
+.page-nav ul {
+	padding-left: .5rem;
+}
+
+.site-logo {
+	background-color: var(--color-black);
+	color: var(--color-yellow);
+	display: block;
+	font-family: var(--font-head);
+	font-size: 2rem;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+.vertical-navigation {
+	list-style: none;
+	text-transform: uppercase;
+}
+
+@media ( min-width: 725px ) {
+
+	.page-nav ul {
+		display: flex;
+		justify-content: center;
+		padding-left: 0;
+	}
+
+	.page-nav li {
+		border-bottom: none;
+		display: block;
+		margin: .5rem;
+		text-decoration: none;
+	}
+
+	.page-nav a:hover {
+		text-decoration: underline;
+	}
+
+	.page-nav .current-page, .page-nav .current-page;visited {
+	color: var(--color-light-black);
+
+	}
+
+}
+
+/*========================================
+Homepage Components
+==========================================*/
+
+.homepage {
+	background-image: url('images/toolshed-logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: auto;
+	max-width: 40rem;
+	min-height: 100vh;
+}
+
+.homepage h1 {
+	color: var(--color-yellow);
+	text-align: center;
+	margin: 0;
+	padding: .5rem;
+}
+
+.homepage p {
+	color: var(--color-yellow);
+	font-size: calc( 0.75rem * var(--size-ratio) );
+	text-align: center;
+	margin: 0 auto;
+	max-width: 35rem;
+}
+
+@media ( min-width: 725px ) {
+
+	.homepage p {
+		color: var(--color-yellow);
+		font-size: 85%;
+		text-align: center;
+		margin: 0 3rem 0 3rem;
+		max-width: 40rem;
+	}
+
+}
+
+/*========================================
+About Components
+==========================================*/
+
+.about {
+	background-image: url('images/toolshed-logo-blue.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0 4rem 0 4rem;
+	max-width: 40rem;
+	min-height: 85vh;
+}
+
+.about h2 {
+	margin-left: 2rem;
+}
+
+.about h3 {
+	margin-left: 2rem;
+}
+
+.about p {
+	margin-left: 1rem;
+}
+
+.tool-collection-image {
+	margin-top: 9rem;
+	margin-bottom: 4rem;
+}
+
+.caption {
+	font-size: calc( 0.75rem * var(--size-ratio) );
+	margin-left: 5rem;
+	margin-bottom: 2rem;
+}
+
+.janine {
+	background-image: url('images/janine.png');
+	background-position: left;
+	background-repeat: no-repeat;
+	margin: 0 4rem 6rem 4rem;
+	padding-top: .5rem;
+}
+
+.janine-bio {
+	margin: 3rem;
+}
+
+/*========================================
+Join Components
+==========================================*/
+
+
+.join {
+	background-image: url('images/toolshed-logo-yellow.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0 4rem 0 4rem;
+	max-width: 40rem;
+}
+
+/*========================================
+Button Styles
+==========================================*/
+
+.link-button-hero {
+	background-color: var(--color-black);
+	border-radius: .5rem;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	display: inline-block;
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
+	padding: .75rem 1.5rem .75rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.link-button-hero:hover {
+	box-shadow: 2px 2px 10px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
+	text-decoration: none;
+}
+
+.link-button-hero:focus {
+	background-color: var(--color-blue);
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
+	outline: none;
+}
+
+.link-button-hero:active {
+	box-shadow: 1px 1px;
+	margin: 1rem 1rem 0 0;
+	min-width: inherit;
+}
+
+/*========================================
+Call to Action
+==========================================*/
+
+a:hover {
+	text-decoration: none;
+}
+
+.call-to-action {
+	background-color: var(--color-light-black);
+	border-radius: .5rem;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	border: 1px var(--color-light-black);
+	border-radius: 2rem;
+	color: var(--color-super-light-blue);
+	display: block;
+	margin: 2.5rem auto 2.5rem auto;
+	max-width: 15rem;
+	padding: 2rem;
+	position: relative;
+	text-align: center;
+}
+
+.call-to-action h2 {
+	font-size: calc( var(--size-two-up) * var(--size-ratio) );
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.call-to-action p {
+	box-shadow: 5px 5px 8px rgba(0,0,0,.5);
+	color: var(--color-yellow);
+	font-size: calc( var(--size-one-up) * var(--size-ratio) );
+	text-decoration: none;
+}
+
+@media ( min-width: 725px ) {
+
+	.call-to-action {
+		max-width: 25rem;
+	}
+}
+
+
+/*========================================
+Card Grid
+==========================================*/
+
+.card-grid {
+	align-items: center;
+	display: grid;
+	grid-gap: 8rem;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 18rem 18rem;
+	margin: 2rem;
+	text-align: center;
+}
+
+.h1-decorative.card-grid {
+	margin: 5rem 0 5rem 0;
+}
+
+
+/*========================================
+Accordions
+==========================================*/
+
+details {
+	background-color: var(--color-light-blue);
+	margin: 2rem 0;
+	overflow: hidden;
+}
+
+details p {
+	padding-left: 1rem;
+}
+
+summary {
+	margin-left: 2rem;
+	padding: 1rem;
+}
+
+summary:focus {
+	outline: none;
+}
+
+details div {
+	padding: 2rem;
+}
+
+
+/*========================================
+Headings and Paragraphs Component
+==========================================*/
+
+.h1-decorative {
+	display: flex;
+	font-size: var(--size-two-up);
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.h2-decorative {
+	font-size: var(--size-one-up);
+	margin-bottom: 0;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+
+.h3-decorative {
+	font-size: var(--size-one-up);
+	font-style: italic;
+	margin-left: 3rem;
+	text-transform: uppercase;
+}
+
+.h4-decorative {
+	background-color: var(--color-light-blue);
+}
+
+h6 {
+	padding-bottom: 2rem;
+}
+
+.headings-indent {
+	margin-left: 1rem;
+}
+
+.featured-text {
+	font-size: var(--size-two-up);
+	font-style: italic;
+	margin: 1rem 0 0 10rem;
+}
+
+
+/*========================================
+Form Inputs
+==========================================*/
+
+input, select, textarea {
+	border: 2px solid lightcoral;
+	border-color: var(--color-blue);
+	border-radius: .5rem;
+	box-sizing: border-box;
+	display: block;
+	margin-top: 1rem;
+	min-width: 50%;
+	padding: .5rem;
+	-webkit-appearance:none;
+}
+
+input:focus, select:focus, textarea:focus {
+	box-shadow: 2px 2px 0  var(--color-light-black);
+	outline: 2px;
+}
+
+input[disabled] {
+	opacity: .5;
+}
+
+.input-examples {
+	margin: 2rem 0 0 1rem;
+}
+
+input[type="submit"], button {
+	background-color: var(--color-light-blue);
+	color: var(--color-black);
+	margin-top: 1rem;
+	min-width: inherit;
+}
+
+input[type="submit"]:focus, button:focus {
+	background-color: var(--color-yellow);
+	color: var(--color-black);
+	margin-top: 1rem;
+	min-width: inherit;
+}
+
+input[type="submit"]:hover, button:hover {
+	background-color: var(--color-black);
+	color: var(--color-yellow);
+	cursor: pointer;
+}
+
+input[type="submit"]:active, button:active {
+	background-color: var(--color-blue);
+	color: var(--color-yellow);
+	cursor: pointer;
+}
+
+/*========================================
+Figure Component
+==========================================*/
+
+.figcaption {
+	color: #424141;
+	margin: 3rem 0 0 5.5rem;
+	font-style: italic;
+}
+
+.caption p {
+	margin: 0 0 0 3.5rem;
+}
+
+.caption cite {
+	margin-left: 5.5rem;
+}
+
+
+/*========================================
+Footer Component
+==========================================*/
+
+.associate-sites {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.associate-sites a {
+	padding: .75rem .5rem .5rem .5rem;
+}
+
+footer {
+	background-color: var(--color-light-yellow);
+	margin-top: 4rem;
+	padding: 1rem;
+	font-size: .9rem;
+}
+
+
+/*========================================
+Media Query: min-width 725px
+==========================================*/
+
+@media( min-width: 725px ) {
+	
+	html {
+		--size-ratio: 1.3;
+	}
+
+	.headings-sample {
+		min-width: 600px;
+	}
+
+}
+
+/*========================================
+Media Query: min-width 1100px
+==========================================*/
+
+@media( min-width: 1100px ) {
+	
+	html {
+		--size-ratio: 1.35;
+	}
+
+	.headings-sample {
+		min-width: 800px;
+	}
+
+}
